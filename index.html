@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Conversor de Bases Numéricas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Conversor de Bases Numéricas</h1>
+            <p class="subtitle">Transforme números entre Binário, Decimal, Octal e Sênario instantaneamente! <span class="highlight">100% interativo</span></p>
+        </div>
+
+        <div class="intro-card">
+            <h3>🎯 Como usar (super simples):</h3>
+            <ol class="steps">
+                <li>Escolha a <strong>base de origem</strong> (onde está seu número)</li>
+                <li>Digite seu número <strong>(apenas dígitos válidos)</strong></li>
+                <li>Escolha a <strong>base destino</strong> (para onde quer converter)</li>
+                <li>Clique <strong>"🔮 Converter Agora"</strong> ou aperte Enter</li>
+            </ol>
+        </div>
+
+        <div class="form-group">
+            <label title="De qual base vem seu número? Ex: 1010 é binário">📍 Base de Origem:</label>
+            <select id="origem">
+                <option value="2">💻 Binário (base 2) - 0,1</option>
+                <option value="10" selected>🔢 Decimal (base 10) - 0-9</option>
+                <option value="8">🔯 Octal (base 8) - 0-7</option>
+                <option value="6">⚡ Sênario (base 6) - 0-5</option>
+            </select>
+
+            <label title="Digite apenas os dígitos válidos da base escolhida">✏️ Seu Número:</label>
+            <input type="text" id="numero" placeholder="Ex: 27 ou 1011 ou 15 ou 21" value="27">
+
+            <label title="Para qual base quer converter?">🎯 Base de Destino:</label>
+            <select id="destino">
+                <option value="2">💻 Binário (base 2)</option>
+                <option value="10">🔢 Decimal (base 10)</option>
+                <option value="8">🔯 Octal (base 8)</option>
+                <option value="6">⚡ Sênario (base 6)</option>
+            </select>
+        </div>
+
+        <button onclick="converter()" title="Converte instantaneamente!">
+            <span>🔮 Converter Agora</span>
+        </button>
+
+        <div id="resultado" class="resultado-area"></div>
+
+        <div class="exemplos">
+            <h4>💡 Exemplos Rápidos:</h4>
+            <div class="exemplo-grid">
+                <div class="exemplo" onclick="setExemplo('27→2')">
+                    <strong>27 → Binário</strong><br>11011
+                </div>
+                <div class="exemplo" onclick="setExemplo('1010→10')">
+                    <strong>1010 → Decimal</strong><br>10
+                </div>
+                <div class="exemplo" onclick="setExemplo('15→6')">
+                    <strong>15 → Base 6</strong><br>23
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
